@@ -14,7 +14,6 @@ def dispm(m):
         print(row)
     print('---------------------------------------------')
 
-
 def mm(a,b):
     if len(a[0]) != len(b):
         return -1
