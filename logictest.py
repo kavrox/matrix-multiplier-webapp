@@ -1,4 +1,6 @@
-def genm(rows, columns): #takes rows and columns and returns a user input matrix
+def genm(): #takes rows and columns and returns a user input matrix
+    rows = int(input("Enter rows: "))
+    columns = int(input("Enter columns: "))
     m = [[] for i in range(rows)]
     for i, row in enumerate(m):
         for j in range(1,columns+1):
@@ -6,6 +8,8 @@ def genm(rows, columns): #takes rows and columns and returns a user input matrix
     return m
 
 def dispm(m):
+    if m == -1:
+        print("Provide valid matrices for multiplication")
     rows = len(m)
     columns = len(m[0])
     print('---------------------------------------------')
@@ -24,6 +28,5 @@ def mm(a,b):
             for k in range(len(b)):                
                 ab[i][j] += a[i][k] * b[k][j]
     return ab
-dispm(mm(genm(5,2),genm(2,4)))
-
-                
+dispm(mm(genm(),genm()))
+       
